@@ -1,0 +1,11 @@
+{
+    "id": "hash of data",
+    "sign": "sign of data by owner",
+    "data": {
+        "date": "2016-03-16T05:03:01.123+0300",
+        "model": "empty",
+        "owner": "name_1",
+        "payload": {
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "id": "hash of data",
+    "sign": "sign of data by owner",
+    "data": {
+        "date": "2016-03-16T05:03:01.123+0300",
+        "model": "form",
+        "owner": "name_1",
+        "payload": {
+            "author": {
+                "authBy": "social.facebook",
+                "name": "Petrenko Ivan",
+                "token": "1234567890",
+            },
+            "formData": {
+                "someScore": 1,
+                "someText": "This text is very important"
+            },
+            "rawTenderID": "",
+            "tenderID": "tender id"
+        },
+        "schema": "F1"
+    }
+}

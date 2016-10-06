@@ -1,0 +1,22 @@
+{
+    "id": "hash of data",
+    "sign": "sign of data by owner",
+    "data": {
+        "date": "2016-03-16T05:03:01.123+0300",
+        "model": "comment",
+        "owner": "name_1",
+        "payload": {
+            "author": {
+                "authBy": "social.facebook",
+                "name": "Petrenko Ivan",
+                "token": "1234567890",
+            },
+            "comment": "text of comment",
+            "rawTenderID": "ddf13b2a745b370b3b7bde480cf4a408",
+            "replyToComment": "aaeceebd9d3ba3cdf410c81221f04d27",
+            "tenderID": "UA-2016-09-30-001139-b",
+            "threadID": "9e7a57b329bbe329e4d04f4ff2e1b600",
+            "update": "comment"
+        }
+    }
+}

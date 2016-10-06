@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "title": "Schema of openprocurement.monitoring.envelope",
+  "properties": {
+    "id": {
+      "description": "First 32 hex chars of sha3_256(sha3_256(data))",
+      "pattern": "^[0-9a-f]{32}$",
+      "type": "string"
+    },
+    "sign": {
+      "description": "Base64 encoded ed25519 signature of data by owner",
+      "pattern": "^[0-9A-Za-z+/]{40,700}={0,3}$",
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "description": "Message body",
+      "properties": {
+        "date": {
+          "description": "Created date in ISO 8601 format",
+          "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(\\.\\d+)?(([+-]\\d\\d:\\d\\d)|Z)?$",
+          "type": "string",
+        },
+        "model": {
+          "description": "Payload model name",
+          "pattern": "^[0-9a-z_]{4,40}$",
+          "type": "string"
+        },
+        "owner": {
+          "description": "Message owner short name (public key id)",
+          "pattern": "^[0-9a-z_]{4,40}$",
+          "type": "string"
+        },
+        "payload": {
+          "description": "Payload data corresponding model and schema",
+          "properties": {},
+          "type": "object"
+        },
+        "schema": {
+          "description": "Model schema version",
+          "pattern": "^[0-9a-z_]{1,8}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "date",
+        "model",
+        "owner",
+        "payload"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "sign",
+    "data"
+  ]
+}
